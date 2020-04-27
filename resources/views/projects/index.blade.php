@@ -11,8 +11,10 @@
     <main class="flex flex-wrap -mx-3">
         @forelse ($projects as $project)
             <div class="w-1/3 px-3 pb-6">
-                <div class="bg-white p-5 rounded shadow" style="height: 200px;">
-                    <h3 class="font-normal text-xl py-4">{{ $project->title }}</h3>
+                <div class="bg-white p-5 rounded-lg shadow" style="height: 200px;">
+                    <h3 class="font-normal text-xl py-4 -ml-5 mb-3 border-l-4 border-primary-light pl-4">
+                        {{ $project->title }}
+                    </h3>
                     <div class="text-gray-600">{{ Str::limit($project->description, 100) }}</div>
                 </div>
             </div>
