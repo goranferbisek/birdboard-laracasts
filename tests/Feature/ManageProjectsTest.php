@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Support\Str;
 
 class ManageProjectsTest extends TestCase
 {
@@ -53,7 +54,7 @@ class ManageProjectsTest extends TestCase
 
         $this->get($project->path())
             ->assertSee($project->title)
-            ->assertSee($project->description);
+            ->assertSee(Str::limit($project->description, 100));
     }
 
     /** @test */
