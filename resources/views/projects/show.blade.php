@@ -42,7 +42,7 @@
                     <h2 class="text-gray-600 font-normal text-lg mb-3">General notes</h2>
 
                     {{-- general notes --}}
-                    <textarea class="card w-full" style="min-height: 200px;">Lorem ipsum.</textarea>
+                    <textarea class="card w-full" placeholder="Anything special you want to make a note of?" style="min-height: 200px;">{{ $project->notes }}</textarea>
                 </div>
 
             </div>
