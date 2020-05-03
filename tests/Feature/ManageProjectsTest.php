@@ -87,11 +87,19 @@ class ManageProjectsTest extends TestCase
     {
         $this->signIn();
 
-        // $this->withoutExceptionHandling();
-
         $project = factory('App\Project')->create();
 
         $this->get($project->path())->assertStatus(403);
+    }
+
+    /** @test */
+    public function an_authenticated_user_cannot_update_projects_of_others()
+    {
+        $this->signIn();
+
+        $project = factory('App\Project')->create();
+
+        $this->patch($project->path(), [])->assertStatus(403);
     }
 
     /** @test */
