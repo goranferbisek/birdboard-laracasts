@@ -46,9 +46,7 @@ class ProjectsController extends Controller
             abort(403);
         }
 
-        $project->update([
-            'notes' => request('notes')
-        ]);
+        $project->update(request(['notes']));
 
         return redirect($project->path());
     }
