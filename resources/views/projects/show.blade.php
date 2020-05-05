@@ -10,7 +10,7 @@
             </p>
 
 
-            <a href="/projects/create" class="button">New project</a>
+            <a href="{{ $project->path() . '/edit'}}" class="button">Edit Project</a>
         </div>
     </header>
     <main>
