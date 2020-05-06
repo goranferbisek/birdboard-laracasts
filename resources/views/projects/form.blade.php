@@ -9,6 +9,7 @@
             id="title"
             placeholder="My next project"
             value="{{ $project->title }}"
+            required
         >
     </div>
 </div>
@@ -21,6 +22,7 @@
             class="textarea bg-transparent border border-grey-light rounded p-2 text-xs w-full"
             id="description"
             placeholder="Describe your new project"
+            required
         >{{ $project->description }}</textarea>
     </div>
 </div>
@@ -31,3 +33,13 @@
         <a href="{{ $project->path() }}">Cancel</a>
     </div>
 </div>
+
+@if($errors->any())
+    <div class="text-red-600 mt-6 text-sm">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
