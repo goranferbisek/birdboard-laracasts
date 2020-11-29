@@ -53,8 +53,17 @@
                         >{{ $project->notes }}</textarea>
                         <button type="submit" class="button">Save</button>
                     </form>
-                </div>
 
+                    @if($errors->any())
+                        <div class="text-red-600 mt-6 text-sm">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
             </div>
             <div class="lg:w-1/4 px-3">
                 @include('projects.card')
