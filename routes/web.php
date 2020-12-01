@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+\App\Project::created(function ($project) {
+    \App\Activity::create([
+        'project_id' => $project->id
+    ]);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
