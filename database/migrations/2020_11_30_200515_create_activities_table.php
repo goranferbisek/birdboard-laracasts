@@ -15,7 +15,7 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('project_id');
+            $table->foreignId('project_id');
             $table->timestamps();
 
             $table->foreign('project_id')
