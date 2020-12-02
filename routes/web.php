@@ -20,6 +20,13 @@ use Illuminate\Support\Facades\Route;
     ]);
 });
 
+\App\Project::updated(function ($project) {
+    \App\Activity::create([
+        'project_id' => $project->id,
+        'description' => 'updated'
+    ]);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
