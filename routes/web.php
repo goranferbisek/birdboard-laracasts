@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 \App\Project::created(function ($project) {
     \App\Activity::create([
-        'project_id' => $project->id
+        'project_id' => $project->id,
+        'description' => 'created'
     ]);
 });
 

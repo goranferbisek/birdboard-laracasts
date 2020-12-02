@@ -14,9 +14,9 @@ class ActivityFeedTest extends TestCase
     /** @test */
     public function creating_a_project_generates_activity()
     {
-        //$this->withExceptionHandling();
         $project = ProjectFactory::create();
 
         $this->assertCount(1, $project->activity);
+        $this->assertEquals('created', $project->activity[0]->description);
     }
 }
