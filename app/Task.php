@@ -10,6 +10,10 @@ class Task extends Model
 
     protected $touches = ['project'];
 
+    protected $casts = [
+        'completed' => 'boolean'
+    ];
+
     // alternative to model observer
     protected static function boot()
     {
@@ -24,6 +28,11 @@ class Task extends Model
 
             $task->project->recordActivity('completed_task');
         });
+    }
+
+    public function complete()
+    {
+        $this->update(['completed' => true]);
     }
 
     public function project()
