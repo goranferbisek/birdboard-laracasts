@@ -21,7 +21,7 @@ class ActivityFeedTest extends TestCase
     }
 
     /** @test */
-    public function updating_a_project_generates_activity()
+    public function updating_a_project_records_activity()
     {
         $project = ProjectFactory::create();
         $project->update(['title' => 'Changed']);
