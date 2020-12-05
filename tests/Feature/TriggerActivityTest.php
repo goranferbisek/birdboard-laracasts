@@ -86,4 +86,13 @@ class TrigerActivityTest extends TestCase
             $project->activity->last()->description
         );
     }
+
+    /** @test */
+    public function deleting_a_task()
+    {
+        $project = ProjectFactory::withTasks(1)->create();
+        $project->tasks[0]->delete();
+
+        $this->assertCount(3, $project->activity);
+    }
 }
