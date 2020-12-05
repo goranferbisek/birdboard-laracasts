@@ -3,11 +3,10 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Facades\Tests\Setup\ProjectFactory;
 use Tests\TestCase;
 
-class RecordActivityTest extends TestCase
+class TrigerActivityTest extends TestCase
 {
     use RefreshDatabase;
 
