@@ -61,4 +61,30 @@ class RecordActivityTest extends TestCase
             $project->activity->last()->description
         );
     }
+
+    /** @test */
+    public function incompleting_a_task()
+    {
+        $project = ProjectFactory::withTasks(1)->create();
+
+        $this->actingAs($project->owner)
+        ->patch($project->tasks[0]->path(), [
+            'body' => 'foobar',
+            'completed' => true
+            ]);
+
+        $this->assertCount(3, $project->activity);
+
+        $this->patch($project->tasks[0]->path(), [
+            'body' => 'foobar',
+            'completed' => false
+            ]);
+
+        $project->refresh();
+        $this->assertCount(4, $project->activity);
+        $this->assertEquals(
+            'uncompleted_task',
+            $project->activity->last()->description
+        );
+    }
 }
