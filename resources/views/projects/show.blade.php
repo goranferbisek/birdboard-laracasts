@@ -72,17 +72,7 @@
                     <ul class="text-xs">
                         @foreach ($project->activity as $activity)
                             <li class="{{ $loop->last ? '' : 'mb-1' }}">
-                                @if ( $activity->description === 'created')
-                                    You created the project
-                                @elseif ( $activity->description === 'updated')
-                                    You updated the project
-                                @elseif ( $activity->description === 'created_task')
-                                    You created a task
-                                @elseif ( $activity->description === 'completed_task')
-                                    You completed a task
-                                @else
-                                    {{ $activity->description }}
-                                @endif
+                                @include("projects.activity.{$activity->description}")
                             </li>
                         @endforeach
                     </ul>
