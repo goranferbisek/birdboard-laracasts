@@ -16,6 +16,8 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('project_id');
+            // morphs - makes nullable subject_id and subject_type
+            $table->nullableMorphs('subject');
             $table->string('description');
             $table->timestamps();
 
