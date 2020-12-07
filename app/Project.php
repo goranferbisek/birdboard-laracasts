@@ -2,11 +2,19 @@
 
 namespace App;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
     protected $guarded = [];
+
+    public $old = [];
+
+    protected function serializeDate(DateTimeInterface $date)
+    {
+        return $date->format('Y-m-d H:i:s');
+    }
 
     public function path()
     {
@@ -30,7 +38,13 @@ class Project extends Model
 
     public function recordActivity($description)
     {
-        $this->activity()->create(compact('description'));
+        $this->activity()->create([
+            'description' => $description,
+            'changes' => [
+                'before' => array_diff($this->old, $this->toArray()),
+                'after' => array_diff($this->toArray(), $this->old)
+            ]
+        ]);
     }
 
     public function activity()

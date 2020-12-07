@@ -19,6 +19,7 @@ class CreateActivitiesTable extends Migration
             // morphs - makes nullable subject_id and subject_type
             $table->nullableMorphs('subject');
             $table->string('description');
+            $table->text('changes')->nullable();
             $table->timestamps();
 
             $table->foreign('project_id')
