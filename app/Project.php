@@ -3,14 +3,14 @@
 namespace App;
 
 use DateTimeInterface;
+use App\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 
 class Project extends Model
 {
-    protected $guarded = [];
+    use RecordsActivity;
 
-    public $old = [];
+    protected $guarded = [];
 
     protected function serializeDate(DateTimeInterface $date)
     {
@@ -35,25 +35,6 @@ class Project extends Model
     public function addTask($body)
     {
         return $this->tasks()->create(compact('body'));
-    }
-
-    public function recordActivity($description)
-    {
-        $this->activity()->create([
-            'description' => $description,
-            'changes' => $this->activityChanges()
-        ]);
-    }
-
-    protected function activityChanges()
-    {
-        if ($this->wasChanged()) {
-            return [
-                'before' => Arr::except(array_diff($this->old, $this->getAttributes()), 'updated_at'),
-                'after' => Arr::except($this->getChanges(), 'updated_at')
-            ];
-        }
-
     }
 
     public function activity()
