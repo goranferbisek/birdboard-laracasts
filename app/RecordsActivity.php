@@ -8,6 +8,13 @@ trait RecordsActivity
 {
     public $old = [];
 
+    public static function bootRecordsActivity()
+    {
+        static::updating(function ($model) {
+            $model->old = $model->getOriginal();
+        });
+    }
+
     public function recordActivity($description)
     {
         $this->activity()->create([
@@ -15,6 +22,11 @@ trait RecordsActivity
             'changes' => $this->activityChanges(),
             'project_id' => class_basename($this) === 'Project' ? $this->id : $this->project_id
         ]);
+    }
+
+    public function activity()
+    {
+        return $this->morphMany(Activity::class, 'subject')->latest();
     }
 
     protected function activityChanges()
