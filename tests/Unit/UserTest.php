@@ -24,18 +24,17 @@ class UserTest extends TestCase
     public function a_user_has_accessible_projects()
     {
         $john = $this->signIn();
-        $project = ProjectFactory::ownedBy($john)->create();
+        ProjectFactory::ownedBy($john)->create();
 
         $this->assertCount(1, $john->accessibleProjects());
 
         $sally = factory(User::class)->create();
         $nick = factory(User::class)->create();
-        $sallysProject = ProjectFactory::ownedBy($sally)->create();
-        $sallysProject->invite($nick);
+        $project = tap(ProjectFactory::ownedBy($sally)->create())->invite($nick);
 
         $this->assertCount(1, $john->accessibleProjects());
 
-        $sallysProject->invite($john);
+        $project->invite($john);
         $this->assertCount(2, $john->accessibleProjects());
     }
 }
