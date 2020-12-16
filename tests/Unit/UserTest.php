@@ -29,8 +29,9 @@ class UserTest extends TestCase
         $this->assertCount(1, $john->accessibleProjects());
 
         $sally = factory(User::class)->create();
-        ProjectFactory::ownedBy($sally)->create()->invite($john);
+        $nick = factory(User::class)->create();
+        ProjectFactory::ownedBy($sally)->create()->invite($nick);
 
-        $this->assertCount(2, $john->accessibleProjects());
+        $this->assertCount(1, $john->accessibleProjects());
     }
 }
