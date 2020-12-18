@@ -17,6 +17,11 @@
                     >
                 @endforeach
 
+                <img src="https://gravatar.com/avatar/{{ md5($project->owner->email) }}?s=60"
+                    class="rounded-full w-8 mr-2"
+                    alt="{{ $project->owner->name }}'s avatar"
+                >
+
                 <a href="{{ $project->path() . '/edit'}}" class="button ml-6">Edit Project</a>
             </div>
         </div>
