@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Project;
 use App\User;
-use Illuminate\Http\Request;
+use App\Project;
+use App\Http\Requests\ProjectInvitationRequest;
 
 class ProjectInvitationsController extends Controller
 {
@@ -16,15 +16,8 @@ class ProjectInvitationsController extends Controller
      * email address and offer the registration to birboard
      * and finally invite them as project members
      */
-    public function store(Project $project)
+    public function store(Project $project, ProjectInvitationRequest $request)
     {
-        $this->authorize('update', $project);
-        request()->validate([
-            'email' => 'required|exists:users,email'
-        ], [
-            'email.exists' => 'The user you ared inviting must have a Birboard account.'
-        ]);
-
         $user = User::whereEmail(request('email'))->first();
         $project->invite($user);
 
