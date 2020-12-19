@@ -20,6 +20,8 @@ class ProjectInvitationsController extends Controller
     {
         request()->validate([
             'email' => 'exists:users,email'
+        ], [
+            'email.exists' => 'The user you ared inviting must have a Birboard account.'
         ]);
 
         $user = User::whereEmail(request('email'))->first();

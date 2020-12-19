@@ -33,7 +33,9 @@ class InvitationsTest extends TestCase
             ->post($project->path() . '/invitations', [
             'email' => 'notauser@example.com'
         ])
-        ->assertSessionHasErrors('email');
+        ->assertSessionHasErrors([
+            'email' => 'The user you ared inviting must have a Birboard account.'
+        ]);
     }
 
     /** @test */
