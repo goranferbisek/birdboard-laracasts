@@ -18,6 +18,10 @@ class ProjectInvitationsController extends Controller
      */
     public function store(Project $project)
     {
+        request()->validate([
+            'email' => 'exists:users,email'
+        ]);
+
         $user = User::whereEmail(request('email'))->first();
         $project->invite($user);
     }
