@@ -88,6 +88,7 @@
                         </div>
                         <button type="submit" class="button">Invite</button>
                     </form>
+                    @include('errors', ['bag' => 'invitations'])
                 </div>
             </div>
         </div>
