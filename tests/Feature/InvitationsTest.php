@@ -56,7 +56,7 @@ class InvitationsTest extends TestCase
         ])
         ->assertSessionHasErrors([
             'email' => 'The user you ared inviting must have a Birboard account.'
-        ]);
+        ], null, 'invitations');
     }
 
     /** @test */
