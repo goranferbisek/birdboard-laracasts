@@ -69,22 +69,14 @@
                         <button type="submit" class="button">Save</button>
                     </form>
 
-                    @if($errors->any())
-                        <div class="text-red-600 mt-6 text-sm">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+                    @include('errors')
                 </div>
             </div>
             <div class="lg:w-1/4 px-3">
                 @include('projects.card')
                 @include('projects.activity.card')
 
-                <div class="card flex flex-col mt-3" style="height: 200px;">
+                <div class="card flex flex-col mt-3">
                     <h3 class="font-normal text-xl py-4 -ml-5 mb-3 border-l-4 border-primary-light pl-4">
                         Invite a user
                     </h3>
