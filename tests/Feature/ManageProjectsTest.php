@@ -59,14 +59,18 @@ class ManageProjectsTest extends TestCase
     }
 
     /** @test */
-    public function unauthorized_users_cannot_delete_a_projects()
+    public function unauthorized_users_cannot_delete_projects()
     {
         $project = ProjectFactory::create();
 
         $this->delete($project->path())->assertRedirect('/login');
 
-        $this->signIn();
+        $user = $this->signIn();
         $this->delete($project->path())->assertStatus(403);
+
+        $project->invite($user);
+
+        $this->actingAs($user)->delete($project->path())->assertStatus(403);
     }
 
     /** @test */
