@@ -4,11 +4,14 @@
 
 use App\Project;
 use Faker\Generator as Faker;
+use Illuminate\Support\Str;
+
 
 $factory->define(Project::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
-        'description' => $faker->paragraph,
+        'description' => Str::limit($faker->paragraph, 100),
+        'notes' => 'Foobar notes',
         'owner_id' => factory(App\User::class)
     ];
 });
