@@ -3,6 +3,11 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    extend: {
+      colors: {
+        page: "var(--page-background-color)",
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
