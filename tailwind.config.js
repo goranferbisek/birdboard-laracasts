@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       colors: {
         page: "var(--page-background-color)",
+        card: '',
+        button: ''
       }
     },
     screens: {
