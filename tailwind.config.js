@@ -5,9 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        page: "var(--page-background-color)",
-        card: '',
-        button: ''
+        page: 'var(--page-background-color)',
+        card: 'var(--card-background-color)',
+        button: 'var(--button-background-color)',
+        header: 'var(--header-background-color)',
+        default: 'var(--text-default-color)'
       }
     },
     screens: {
