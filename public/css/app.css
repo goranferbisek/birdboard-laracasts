@@ -1543,6 +1543,10 @@ video {
   border-color: var(--header-background-color);
 }
 
+.divide-accent > :not(template) ~ :not(template) {
+  border-color: var(--text-accent-color);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2007,6 +2011,10 @@ video {
   background-color: var(--header-background-color);
 }
 
+.bg-accent {
+  background-color: var(--text-accent-color);
+}
+
 .bg-default {
   background-color: var(--text-default-color);
 }
@@ -2411,6 +2419,10 @@ video {
   background-color: var(--header-background-color);
 }
 
+.hover\:bg-accent:hover {
+  background-color: var(--text-accent-color);
+}
+
 .hover\:bg-default:hover {
   background-color: var(--text-default-color);
 }
@@ -2813,6 +2825,10 @@ video {
 
 .focus\:bg-header:focus {
   background-color: var(--header-background-color);
+}
+
+.focus\:bg-accent:focus {
+  background-color: var(--text-accent-color);
 }
 
 .focus\:bg-default:focus {
@@ -3299,6 +3315,10 @@ video {
   border-color: var(--header-background-color);
 }
 
+.border-accent {
+  border-color: var(--text-accent-color);
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -3699,6 +3719,10 @@ video {
   border-color: var(--header-background-color);
 }
 
+.hover\:border-accent:hover {
+  border-color: var(--text-accent-color);
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -4097,6 +4121,10 @@ video {
 
 .focus\:border-header:focus {
   border-color: var(--header-background-color);
+}
+
+.focus\:border-accent:focus {
+  border-color: var(--text-accent-color);
 }
 
 .rounded-none {
@@ -9125,6 +9153,26 @@ video {
   color: var(--header-background-color);
 }
 
+.placeholder-accent::-webkit-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.placeholder-accent::-moz-placeholder {
+  color: var(--text-accent-color);
+}
+
+.placeholder-accent:-ms-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.placeholder-accent::-ms-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.placeholder-accent::placeholder {
+  color: var(--text-accent-color);
+}
+
 .placeholder-default::-webkit-input-placeholder {
   color: var(--text-default-color);
 }
@@ -11145,6 +11193,26 @@ video {
   color: var(--header-background-color);
 }
 
+.focus\:placeholder-accent:focus::-webkit-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.focus\:placeholder-accent:focus::-moz-placeholder {
+  color: var(--text-accent-color);
+}
+
+.focus\:placeholder-accent:focus:-ms-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.focus\:placeholder-accent:focus::-ms-input-placeholder {
+  color: var(--text-accent-color);
+}
+
+.focus\:placeholder-accent:focus::placeholder {
+  color: var(--text-accent-color);
+}
+
 .focus\:placeholder-default:focus::-webkit-input-placeholder {
   color: var(--text-default-color);
 }
@@ -11840,6 +11908,10 @@ video {
   color: var(--header-background-color);
 }
 
+.text-accent {
+  color: var(--text-accent-color);
+}
+
 .text-default {
   color: var(--text-default-color);
 }
@@ -12244,6 +12316,10 @@ video {
   color: var(--header-background-color);
 }
 
+.hover\:text-accent:hover {
+  color: var(--text-accent-color);
+}
+
 .hover\:text-default:hover {
   color: var(--text-default-color);
 }
@@ -12646,6 +12722,10 @@ video {
 
 .focus\:text-header:focus {
   color: var(--header-background-color);
+}
+
+.focus\:text-accent:focus {
+  color: var(--text-accent-color);
 }
 
 .focus\:text-default:focus {
@@ -15512,6 +15592,7 @@ video {
   --button-background-color: #47CDFF;
   --header-background-color: white;
   --text-default-color: #222;
+  --text-accent-color: #47cdff;
 }
 
 .theme-dark {
@@ -15520,6 +15601,7 @@ video {
   --button-background-color: #59B6F9;
   --header-background-color: #1F2027;
   --text-default-color: #FFF;
+  --text-accent-color: #47cdff;
 }
 
 .button {
@@ -16468,6 +16550,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .sm\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-color);
+  }
+
   .sm\:sr-only {
     position: absolute;
     width: 1px;
@@ -16932,6 +17018,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .sm\:bg-accent {
+    background-color: var(--text-accent-color);
+  }
+
   .sm\:bg-default {
     background-color: var(--text-default-color);
   }
@@ -17336,6 +17426,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .sm\:hover\:bg-accent:hover {
+    background-color: var(--text-accent-color);
+  }
+
   .sm\:hover\:bg-default:hover {
     background-color: var(--text-default-color);
   }
@@ -17738,6 +17832,10 @@ button {
 
   .sm\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .sm\:focus\:bg-accent:focus {
+    background-color: var(--text-accent-color);
   }
 
   .sm\:focus\:bg-default:focus {
@@ -18224,6 +18322,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .sm\:border-accent {
+    border-color: var(--text-accent-color);
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -18624,6 +18726,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .sm\:hover\:border-accent:hover {
+    border-color: var(--text-accent-color);
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -19022,6 +19128,10 @@ button {
 
   .sm\:focus\:border-header:focus {
     border-color: var(--header-background-color);
+  }
+
+  .sm\:focus\:border-accent:focus {
+    border-color: var(--text-accent-color);
   }
 
   .sm\:rounded-none {
@@ -24050,6 +24160,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:placeholder-accent::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:placeholder-accent::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:placeholder-accent:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:placeholder-accent::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:placeholder-accent::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .sm\:placeholder-default::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -26070,6 +26200,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:focus\:placeholder-accent:focus::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:focus\:placeholder-accent:focus:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:focus\:placeholder-accent:focus::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .sm\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .sm\:focus\:placeholder-default:focus::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -26765,6 +26915,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:text-accent {
+    color: var(--text-accent-color);
+  }
+
   .sm\:text-default {
     color: var(--text-default-color);
   }
@@ -27169,6 +27323,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:hover\:text-accent:hover {
+    color: var(--text-accent-color);
+  }
+
   .sm\:hover\:text-default:hover {
     color: var(--text-default-color);
   }
@@ -27571,6 +27729,10 @@ button {
 
   .sm\:focus\:text-header:focus {
     color: var(--header-background-color);
+  }
+
+  .sm\:focus\:text-accent:focus {
+    color: var(--text-accent-color);
   }
 
   .sm\:focus\:text-default:focus {
@@ -31353,6 +31515,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .md\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-color);
+  }
+
   .md\:sr-only {
     position: absolute;
     width: 1px;
@@ -31817,6 +31983,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .md\:bg-accent {
+    background-color: var(--text-accent-color);
+  }
+
   .md\:bg-default {
     background-color: var(--text-default-color);
   }
@@ -32221,6 +32391,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .md\:hover\:bg-accent:hover {
+    background-color: var(--text-accent-color);
+  }
+
   .md\:hover\:bg-default:hover {
     background-color: var(--text-default-color);
   }
@@ -32623,6 +32797,10 @@ button {
 
   .md\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .md\:focus\:bg-accent:focus {
+    background-color: var(--text-accent-color);
   }
 
   .md\:focus\:bg-default:focus {
@@ -33109,6 +33287,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .md\:border-accent {
+    border-color: var(--text-accent-color);
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -33509,6 +33691,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .md\:hover\:border-accent:hover {
+    border-color: var(--text-accent-color);
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -33907,6 +34093,10 @@ button {
 
   .md\:focus\:border-header:focus {
     border-color: var(--header-background-color);
+  }
+
+  .md\:focus\:border-accent:focus {
+    border-color: var(--text-accent-color);
   }
 
   .md\:rounded-none {
@@ -38935,6 +39125,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:placeholder-accent::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:placeholder-accent::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:placeholder-accent:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:placeholder-accent::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:placeholder-accent::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .md\:placeholder-default::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -40955,6 +41165,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:focus\:placeholder-accent:focus::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:focus\:placeholder-accent:focus:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:focus\:placeholder-accent:focus::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .md\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .md\:focus\:placeholder-default:focus::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -41650,6 +41880,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:text-accent {
+    color: var(--text-accent-color);
+  }
+
   .md\:text-default {
     color: var(--text-default-color);
   }
@@ -42054,6 +42288,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:hover\:text-accent:hover {
+    color: var(--text-accent-color);
+  }
+
   .md\:hover\:text-default:hover {
     color: var(--text-default-color);
   }
@@ -42456,6 +42694,10 @@ button {
 
   .md\:focus\:text-header:focus {
     color: var(--header-background-color);
+  }
+
+  .md\:focus\:text-accent:focus {
+    color: var(--text-accent-color);
   }
 
   .md\:focus\:text-default:focus {
@@ -46238,6 +46480,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .lg\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-color);
+  }
+
   .lg\:sr-only {
     position: absolute;
     width: 1px;
@@ -46702,6 +46948,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .lg\:bg-accent {
+    background-color: var(--text-accent-color);
+  }
+
   .lg\:bg-default {
     background-color: var(--text-default-color);
   }
@@ -47106,6 +47356,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .lg\:hover\:bg-accent:hover {
+    background-color: var(--text-accent-color);
+  }
+
   .lg\:hover\:bg-default:hover {
     background-color: var(--text-default-color);
   }
@@ -47508,6 +47762,10 @@ button {
 
   .lg\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .lg\:focus\:bg-accent:focus {
+    background-color: var(--text-accent-color);
   }
 
   .lg\:focus\:bg-default:focus {
@@ -47994,6 +48252,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .lg\:border-accent {
+    border-color: var(--text-accent-color);
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -48394,6 +48656,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .lg\:hover\:border-accent:hover {
+    border-color: var(--text-accent-color);
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -48792,6 +49058,10 @@ button {
 
   .lg\:focus\:border-header:focus {
     border-color: var(--header-background-color);
+  }
+
+  .lg\:focus\:border-accent:focus {
+    border-color: var(--text-accent-color);
   }
 
   .lg\:rounded-none {
@@ -53820,6 +54090,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:placeholder-accent::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:placeholder-accent::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:placeholder-accent:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:placeholder-accent::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:placeholder-accent::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .lg\:placeholder-default::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -55840,6 +56130,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:focus\:placeholder-accent:focus::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:focus\:placeholder-accent:focus:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:focus\:placeholder-accent:focus::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .lg\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .lg\:focus\:placeholder-default:focus::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -56535,6 +56845,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:text-accent {
+    color: var(--text-accent-color);
+  }
+
   .lg\:text-default {
     color: var(--text-default-color);
   }
@@ -56939,6 +57253,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:hover\:text-accent:hover {
+    color: var(--text-accent-color);
+  }
+
   .lg\:hover\:text-default:hover {
     color: var(--text-default-color);
   }
@@ -57341,6 +57659,10 @@ button {
 
   .lg\:focus\:text-header:focus {
     color: var(--header-background-color);
+  }
+
+  .lg\:focus\:text-accent:focus {
+    color: var(--text-accent-color);
   }
 
   .lg\:focus\:text-default:focus {
@@ -61123,6 +61445,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .xl\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-color);
+  }
+
   .xl\:sr-only {
     position: absolute;
     width: 1px;
@@ -61587,6 +61913,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .xl\:bg-accent {
+    background-color: var(--text-accent-color);
+  }
+
   .xl\:bg-default {
     background-color: var(--text-default-color);
   }
@@ -61991,6 +62321,10 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .xl\:hover\:bg-accent:hover {
+    background-color: var(--text-accent-color);
+  }
+
   .xl\:hover\:bg-default:hover {
     background-color: var(--text-default-color);
   }
@@ -62393,6 +62727,10 @@ button {
 
   .xl\:focus\:bg-header:focus {
     background-color: var(--header-background-color);
+  }
+
+  .xl\:focus\:bg-accent:focus {
+    background-color: var(--text-accent-color);
   }
 
   .xl\:focus\:bg-default:focus {
@@ -62879,6 +63217,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .xl\:border-accent {
+    border-color: var(--text-accent-color);
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -63279,6 +63621,10 @@ button {
     border-color: var(--header-background-color);
   }
 
+  .xl\:hover\:border-accent:hover {
+    border-color: var(--text-accent-color);
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -63677,6 +64023,10 @@ button {
 
   .xl\:focus\:border-header:focus {
     border-color: var(--header-background-color);
+  }
+
+  .xl\:focus\:border-accent:focus {
+    border-color: var(--text-accent-color);
   }
 
   .xl\:rounded-none {
@@ -68705,6 +69055,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:placeholder-accent::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:placeholder-accent::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:placeholder-accent:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:placeholder-accent::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:placeholder-accent::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .xl\:placeholder-default::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -70725,6 +71095,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:focus\:placeholder-accent:focus::-moz-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:focus\:placeholder-accent:focus:-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:focus\:placeholder-accent:focus::-ms-input-placeholder {
+    color: var(--text-accent-color);
+  }
+
+  .xl\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--text-accent-color);
+  }
+
   .xl\:focus\:placeholder-default:focus::-webkit-input-placeholder {
     color: var(--text-default-color);
   }
@@ -71420,6 +71810,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:text-accent {
+    color: var(--text-accent-color);
+  }
+
   .xl\:text-default {
     color: var(--text-default-color);
   }
@@ -71824,6 +72218,10 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:hover\:text-accent:hover {
+    color: var(--text-accent-color);
+  }
+
   .xl\:hover\:text-default:hover {
     color: var(--text-default-color);
   }
@@ -72226,6 +72624,10 @@ button {
 
   .xl\:focus\:text-header:focus {
     color: var(--header-background-color);
+  }
+
+  .xl\:focus\:text-accent:focus {
+    color: var(--text-accent-color);
   }
 
   .xl\:focus\:text-default:focus {
