@@ -15542,6 +15542,11 @@ video {
   color: var(--text-default-color);
 }
 
+body,
+button {
+  color: var(--text-default-color);
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
