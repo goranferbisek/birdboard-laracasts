@@ -15511,6 +15511,7 @@ video {
   --card-background-color: white;
   --button-background-color: #47CDFF;
   --header-background-color: white;
+  --text-default-color: #222;
 }
 
 .theme-dark {
