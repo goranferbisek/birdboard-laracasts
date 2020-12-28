@@ -18,7 +18,7 @@
         @endforelse
     </main>
 
-    <modal name="hello-world" classes="p-10 bg-card rounded-lg" height="auto">
+    <modal name="new-project" classes="p-10 bg-card rounded-lg" height="auto">
         <h1 class="font-normal mb-16 text-center text-2xl">Let's Start Something New</h1>
 
         <div class="flex">
@@ -52,11 +52,11 @@
         </div>
 
         <footer class="flex justify-end">
-            <button class="button is-outlined mr-4">Cancel</button>
+            <button class="button is-outlined mr-4" @click="$modal.hide('new-project')">Cancel</button>
             <button class="button">Create Project</button>
 
         </footer>
     </modal>
 
-    <a href="" @click.prevent="$modal.show('hello-world')">Show modal</a>
+    <a href="" @click.prevent="$modal.show('new-project')">Show modal</a>
 @endsection
