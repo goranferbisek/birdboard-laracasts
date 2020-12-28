@@ -1547,6 +1547,18 @@ video {
   border-color: var(--text-accent-color);
 }
 
+.divide-accent-light > :not(template) ~ :not(template) {
+  border-color: var(--text-accent-light-color);
+}
+
+.divide-muted > :not(template) ~ :not(template) {
+  border-color: var(--text-muted-color);
+}
+
+.divide-muted-light > :not(template) ~ :not(template) {
+  border-color: var(--text-muted-light-color);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2011,12 +2023,24 @@ video {
   background-color: var(--header-background-color);
 }
 
+.bg-default {
+  background-color: var(--text-default-color);
+}
+
 .bg-accent {
   background-color: var(--text-accent-color);
 }
 
-.bg-default {
-  background-color: var(--text-default-color);
+.bg-accent-light {
+  background-color: var(--text-accent-light-color);
+}
+
+.bg-muted {
+  background-color: var(--text-muted-color);
+}
+
+.bg-muted-light {
+  background-color: var(--text-muted-light-color);
 }
 
 .hover\:bg-transparent:hover {
@@ -2419,12 +2443,24 @@ video {
   background-color: var(--header-background-color);
 }
 
+.hover\:bg-default:hover {
+  background-color: var(--text-default-color);
+}
+
 .hover\:bg-accent:hover {
   background-color: var(--text-accent-color);
 }
 
-.hover\:bg-default:hover {
-  background-color: var(--text-default-color);
+.hover\:bg-accent-light:hover {
+  background-color: var(--text-accent-light-color);
+}
+
+.hover\:bg-muted:hover {
+  background-color: var(--text-muted-color);
+}
+
+.hover\:bg-muted-light:hover {
+  background-color: var(--text-muted-light-color);
 }
 
 .focus\:bg-transparent:focus {
@@ -2827,12 +2863,24 @@ video {
   background-color: var(--header-background-color);
 }
 
+.focus\:bg-default:focus {
+  background-color: var(--text-default-color);
+}
+
 .focus\:bg-accent:focus {
   background-color: var(--text-accent-color);
 }
 
-.focus\:bg-default:focus {
-  background-color: var(--text-default-color);
+.focus\:bg-accent-light:focus {
+  background-color: var(--text-accent-light-color);
+}
+
+.focus\:bg-muted:focus {
+  background-color: var(--text-muted-color);
+}
+
+.focus\:bg-muted-light:focus {
+  background-color: var(--text-muted-light-color);
 }
 
 .bg-bottom {
@@ -3319,6 +3367,18 @@ video {
   border-color: var(--text-accent-color);
 }
 
+.border-accent-light {
+  border-color: var(--text-accent-light-color);
+}
+
+.border-muted {
+  border-color: var(--text-muted-color);
+}
+
+.border-muted-light {
+  border-color: var(--text-muted-light-color);
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -3723,6 +3783,18 @@ video {
   border-color: var(--text-accent-color);
 }
 
+.hover\:border-accent-light:hover {
+  border-color: var(--text-accent-light-color);
+}
+
+.hover\:border-muted:hover {
+  border-color: var(--text-muted-color);
+}
+
+.hover\:border-muted-light:hover {
+  border-color: var(--text-muted-light-color);
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -4125,6 +4197,18 @@ video {
 
 .focus\:border-accent:focus {
   border-color: var(--text-accent-color);
+}
+
+.focus\:border-accent-light:focus {
+  border-color: var(--text-accent-light-color);
+}
+
+.focus\:border-muted:focus {
+  border-color: var(--text-muted-color);
+}
+
+.focus\:border-muted-light:focus {
+  border-color: var(--text-muted-light-color);
 }
 
 .rounded-none {
@@ -9153,6 +9237,26 @@ video {
   color: var(--header-background-color);
 }
 
+.placeholder-default::-webkit-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.placeholder-default::-moz-placeholder {
+  color: var(--text-default-color);
+}
+
+.placeholder-default:-ms-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.placeholder-default::-ms-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.placeholder-default::placeholder {
+  color: var(--text-default-color);
+}
+
 .placeholder-accent::-webkit-input-placeholder {
   color: var(--text-accent-color);
 }
@@ -9173,24 +9277,64 @@ video {
   color: var(--text-accent-color);
 }
 
-.placeholder-default::-webkit-input-placeholder {
-  color: var(--text-default-color);
+.placeholder-accent-light::-webkit-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.placeholder-default::-moz-placeholder {
-  color: var(--text-default-color);
+.placeholder-accent-light::-moz-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.placeholder-default:-ms-input-placeholder {
-  color: var(--text-default-color);
+.placeholder-accent-light:-ms-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.placeholder-default::-ms-input-placeholder {
-  color: var(--text-default-color);
+.placeholder-accent-light::-ms-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.placeholder-default::placeholder {
-  color: var(--text-default-color);
+.placeholder-accent-light::placeholder {
+  color: var(--text-accent-light-color);
+}
+
+.placeholder-muted::-webkit-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.placeholder-muted::-moz-placeholder {
+  color: var(--text-muted-color);
+}
+
+.placeholder-muted:-ms-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.placeholder-muted::-ms-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.placeholder-muted::placeholder {
+  color: var(--text-muted-color);
+}
+
+.placeholder-muted-light::-webkit-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.placeholder-muted-light::-moz-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.placeholder-muted-light:-ms-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.placeholder-muted-light::-ms-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.placeholder-muted-light::placeholder {
+  color: var(--text-muted-light-color);
 }
 
 .focus\:placeholder-transparent:focus::-webkit-input-placeholder {
@@ -11193,6 +11337,26 @@ video {
   color: var(--header-background-color);
 }
 
+.focus\:placeholder-default:focus::-webkit-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.focus\:placeholder-default:focus::-moz-placeholder {
+  color: var(--text-default-color);
+}
+
+.focus\:placeholder-default:focus:-ms-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.focus\:placeholder-default:focus::-ms-input-placeholder {
+  color: var(--text-default-color);
+}
+
+.focus\:placeholder-default:focus::placeholder {
+  color: var(--text-default-color);
+}
+
 .focus\:placeholder-accent:focus::-webkit-input-placeholder {
   color: var(--text-accent-color);
 }
@@ -11213,24 +11377,64 @@ video {
   color: var(--text-accent-color);
 }
 
-.focus\:placeholder-default:focus::-webkit-input-placeholder {
-  color: var(--text-default-color);
+.focus\:placeholder-accent-light:focus::-webkit-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.focus\:placeholder-default:focus::-moz-placeholder {
-  color: var(--text-default-color);
+.focus\:placeholder-accent-light:focus::-moz-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.focus\:placeholder-default:focus:-ms-input-placeholder {
-  color: var(--text-default-color);
+.focus\:placeholder-accent-light:focus:-ms-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.focus\:placeholder-default:focus::-ms-input-placeholder {
-  color: var(--text-default-color);
+.focus\:placeholder-accent-light:focus::-ms-input-placeholder {
+  color: var(--text-accent-light-color);
 }
 
-.focus\:placeholder-default:focus::placeholder {
-  color: var(--text-default-color);
+.focus\:placeholder-accent-light:focus::placeholder {
+  color: var(--text-accent-light-color);
+}
+
+.focus\:placeholder-muted:focus::-webkit-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.focus\:placeholder-muted:focus::-moz-placeholder {
+  color: var(--text-muted-color);
+}
+
+.focus\:placeholder-muted:focus:-ms-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.focus\:placeholder-muted:focus::-ms-input-placeholder {
+  color: var(--text-muted-color);
+}
+
+.focus\:placeholder-muted:focus::placeholder {
+  color: var(--text-muted-color);
+}
+
+.focus\:placeholder-muted-light:focus::-webkit-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.focus\:placeholder-muted-light:focus::-moz-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.focus\:placeholder-muted-light:focus:-ms-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.focus\:placeholder-muted-light:focus::-ms-input-placeholder {
+  color: var(--text-muted-light-color);
+}
+
+.focus\:placeholder-muted-light:focus::placeholder {
+  color: var(--text-muted-light-color);
 }
 
 .pointer-events-none {
@@ -11908,12 +12112,24 @@ video {
   color: var(--header-background-color);
 }
 
+.text-default {
+  color: var(--text-default-color);
+}
+
 .text-accent {
   color: var(--text-accent-color);
 }
 
-.text-default {
-  color: var(--text-default-color);
+.text-accent-light {
+  color: var(--text-accent-light-color);
+}
+
+.text-muted {
+  color: var(--text-muted-color);
+}
+
+.text-muted-light {
+  color: var(--text-muted-light-color);
 }
 
 .hover\:text-transparent:hover {
@@ -12316,12 +12532,24 @@ video {
   color: var(--header-background-color);
 }
 
+.hover\:text-default:hover {
+  color: var(--text-default-color);
+}
+
 .hover\:text-accent:hover {
   color: var(--text-accent-color);
 }
 
-.hover\:text-default:hover {
-  color: var(--text-default-color);
+.hover\:text-accent-light:hover {
+  color: var(--text-accent-light-color);
+}
+
+.hover\:text-muted:hover {
+  color: var(--text-muted-color);
+}
+
+.hover\:text-muted-light:hover {
+  color: var(--text-muted-light-color);
 }
 
 .focus\:text-transparent:focus {
@@ -12724,12 +12952,24 @@ video {
   color: var(--header-background-color);
 }
 
+.focus\:text-default:focus {
+  color: var(--text-default-color);
+}
+
 .focus\:text-accent:focus {
   color: var(--text-accent-color);
 }
 
-.focus\:text-default:focus {
-  color: var(--text-default-color);
+.focus\:text-accent-light:focus {
+  color: var(--text-accent-light-color);
+}
+
+.focus\:text-muted:focus {
+  color: var(--text-muted-color);
+}
+
+.focus\:text-muted-light:focus {
+  color: var(--text-muted-light-color);
 }
 
 .italic {
@@ -15593,6 +15833,10 @@ video {
   --header-background-color: white;
   --text-default-color: #222;
   --text-accent-color: #47cdff;
+  --text-accent-light-color: #8ae2fe;
+  --text-muted-color: rgba(0, 0, 0, 0.3);
+  --text-muted-light-color: rgba(255, 255, 255, 0.1);
+  --text-muted-light-color: #e1e6e8;
 }
 
 .theme-dark {
@@ -15601,7 +15845,10 @@ video {
   --button-background-color: #59B6F9;
   --header-background-color: #1F2027;
   --text-default-color: #FFF;
+  --text-muted-color: rgba(255, 255, 255, 0.5);
+  --text-muted-light-color: rgba(255, 255, 255, 0.3);
   --text-accent-color: #47cdff;
+  --text-accent-light-color: #8ae2fe;
 }
 
 .button {
@@ -15613,7 +15860,22 @@ video {
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  color: white;
+}
+
+.button.is-outlined {
+  background-color: var(--card-background-color);
+  border-width: 1px;
+  border-color: var(--text-accent-color);
+  color: var(--text-accent-color);
+}
+
+.theme-light .button {
   box-shadow: 0 2px 7px #b0eaff;
+}
+
+.theme-dark .button {
+  box-shadow: 0 2px 7px #00658b;
 }
 
 .card {
@@ -16554,6 +16816,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .sm\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .sm\:divide-muted > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-color);
+  }
+
+  .sm\:divide-muted-light > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-light-color);
+  }
+
   .sm\:sr-only {
     position: absolute;
     width: 1px;
@@ -17018,12 +17292,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .sm\:bg-default {
+    background-color: var(--text-default-color);
+  }
+
   .sm\:bg-accent {
     background-color: var(--text-accent-color);
   }
 
-  .sm\:bg-default {
-    background-color: var(--text-default-color);
+  .sm\:bg-accent-light {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .sm\:bg-muted {
+    background-color: var(--text-muted-color);
+  }
+
+  .sm\:bg-muted-light {
+    background-color: var(--text-muted-light-color);
   }
 
   .sm\:hover\:bg-transparent:hover {
@@ -17426,12 +17712,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .sm\:hover\:bg-default:hover {
+    background-color: var(--text-default-color);
+  }
+
   .sm\:hover\:bg-accent:hover {
     background-color: var(--text-accent-color);
   }
 
-  .sm\:hover\:bg-default:hover {
-    background-color: var(--text-default-color);
+  .sm\:hover\:bg-accent-light:hover {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .sm\:hover\:bg-muted:hover {
+    background-color: var(--text-muted-color);
+  }
+
+  .sm\:hover\:bg-muted-light:hover {
+    background-color: var(--text-muted-light-color);
   }
 
   .sm\:focus\:bg-transparent:focus {
@@ -17834,12 +18132,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .sm\:focus\:bg-default:focus {
+    background-color: var(--text-default-color);
+  }
+
   .sm\:focus\:bg-accent:focus {
     background-color: var(--text-accent-color);
   }
 
-  .sm\:focus\:bg-default:focus {
-    background-color: var(--text-default-color);
+  .sm\:focus\:bg-accent-light:focus {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .sm\:focus\:bg-muted:focus {
+    background-color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:bg-muted-light:focus {
+    background-color: var(--text-muted-light-color);
   }
 
   .sm\:bg-bottom {
@@ -18326,6 +18636,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .sm\:border-accent-light {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .sm\:border-muted {
+    border-color: var(--text-muted-color);
+  }
+
+  .sm\:border-muted-light {
+    border-color: var(--text-muted-light-color);
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -18730,6 +19052,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .sm\:hover\:border-accent-light:hover {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .sm\:hover\:border-muted:hover {
+    border-color: var(--text-muted-color);
+  }
+
+  .sm\:hover\:border-muted-light:hover {
+    border-color: var(--text-muted-light-color);
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -19132,6 +19466,18 @@ button {
 
   .sm\:focus\:border-accent:focus {
     border-color: var(--text-accent-color);
+  }
+
+  .sm\:focus\:border-accent-light:focus {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .sm\:focus\:border-muted:focus {
+    border-color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:border-muted-light:focus {
+    border-color: var(--text-muted-light-color);
   }
 
   .sm\:rounded-none {
@@ -24160,6 +24506,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:placeholder-default::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:placeholder-default::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:placeholder-default:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:placeholder-default::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:placeholder-default::placeholder {
+    color: var(--text-default-color);
+  }
+
   .sm\:placeholder-accent::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -24180,24 +24546,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .sm\:placeholder-default::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:placeholder-accent-light::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:placeholder-default::-moz-placeholder {
-    color: var(--text-default-color);
+  .sm\:placeholder-accent-light::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:placeholder-default:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:placeholder-accent-light:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:placeholder-default::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:placeholder-accent-light::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:placeholder-default::placeholder {
-    color: var(--text-default-color);
+  .sm\:placeholder-accent-light::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .sm\:placeholder-muted::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:placeholder-muted::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:placeholder-muted:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:placeholder-muted::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:placeholder-muted::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:placeholder-muted-light::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:placeholder-muted-light::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:placeholder-muted-light:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:placeholder-muted-light::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:placeholder-muted-light::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .sm\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
@@ -26200,6 +26606,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:focus\:placeholder-default:focus::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:focus\:placeholder-default:focus::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:focus\:placeholder-default:focus:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:focus\:placeholder-default:focus::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .sm\:focus\:placeholder-default:focus::placeholder {
+    color: var(--text-default-color);
+  }
+
   .sm\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -26220,24 +26646,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .sm\:focus\:placeholder-default:focus::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:focus\:placeholder-accent-light:focus::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:focus\:placeholder-default:focus::-moz-placeholder {
-    color: var(--text-default-color);
+  .sm\:focus\:placeholder-accent-light:focus::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:focus\:placeholder-default:focus:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:focus\:placeholder-accent-light:focus:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:focus\:placeholder-default:focus::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .sm\:focus\:placeholder-accent-light:focus::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .sm\:focus\:placeholder-default:focus::placeholder {
-    color: var(--text-default-color);
+  .sm\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .sm\:focus\:placeholder-muted:focus::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:placeholder-muted:focus::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:placeholder-muted:focus:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:placeholder-muted:focus::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:placeholder-muted:focus::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:placeholder-muted-light:focus::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:placeholder-muted-light:focus::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:placeholder-muted-light:focus:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:placeholder-muted-light:focus::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .sm\:focus\:placeholder-muted-light:focus::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .sm\:pointer-events-none {
@@ -26915,12 +27381,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:text-default {
+    color: var(--text-default-color);
+  }
+
   .sm\:text-accent {
     color: var(--text-accent-color);
   }
 
-  .sm\:text-default {
-    color: var(--text-default-color);
+  .sm\:text-accent-light {
+    color: var(--text-accent-light-color);
+  }
+
+  .sm\:text-muted {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:text-muted-light {
+    color: var(--text-muted-light-color);
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -27323,12 +27801,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .sm\:hover\:text-accent:hover {
     color: var(--text-accent-color);
   }
 
-  .sm\:hover\:text-default:hover {
-    color: var(--text-default-color);
+  .sm\:hover\:text-accent-light:hover {
+    color: var(--text-accent-light-color);
+  }
+
+  .sm\:hover\:text-muted:hover {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:hover\:text-muted-light:hover {
+    color: var(--text-muted-light-color);
   }
 
   .sm\:focus\:text-transparent:focus {
@@ -27731,12 +28221,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .sm\:focus\:text-default:focus {
+    color: var(--text-default-color);
+  }
+
   .sm\:focus\:text-accent:focus {
     color: var(--text-accent-color);
   }
 
-  .sm\:focus\:text-default:focus {
-    color: var(--text-default-color);
+  .sm\:focus\:text-accent-light:focus {
+    color: var(--text-accent-light-color);
+  }
+
+  .sm\:focus\:text-muted:focus {
+    color: var(--text-muted-color);
+  }
+
+  .sm\:focus\:text-muted-light:focus {
+    color: var(--text-muted-light-color);
   }
 
   .sm\:italic {
@@ -31519,6 +32021,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .md\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .md\:divide-muted > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-color);
+  }
+
+  .md\:divide-muted-light > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-light-color);
+  }
+
   .md\:sr-only {
     position: absolute;
     width: 1px;
@@ -31983,12 +32497,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .md\:bg-default {
+    background-color: var(--text-default-color);
+  }
+
   .md\:bg-accent {
     background-color: var(--text-accent-color);
   }
 
-  .md\:bg-default {
-    background-color: var(--text-default-color);
+  .md\:bg-accent-light {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .md\:bg-muted {
+    background-color: var(--text-muted-color);
+  }
+
+  .md\:bg-muted-light {
+    background-color: var(--text-muted-light-color);
   }
 
   .md\:hover\:bg-transparent:hover {
@@ -32391,12 +32917,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .md\:hover\:bg-default:hover {
+    background-color: var(--text-default-color);
+  }
+
   .md\:hover\:bg-accent:hover {
     background-color: var(--text-accent-color);
   }
 
-  .md\:hover\:bg-default:hover {
-    background-color: var(--text-default-color);
+  .md\:hover\:bg-accent-light:hover {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .md\:hover\:bg-muted:hover {
+    background-color: var(--text-muted-color);
+  }
+
+  .md\:hover\:bg-muted-light:hover {
+    background-color: var(--text-muted-light-color);
   }
 
   .md\:focus\:bg-transparent:focus {
@@ -32799,12 +33337,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .md\:focus\:bg-default:focus {
+    background-color: var(--text-default-color);
+  }
+
   .md\:focus\:bg-accent:focus {
     background-color: var(--text-accent-color);
   }
 
-  .md\:focus\:bg-default:focus {
-    background-color: var(--text-default-color);
+  .md\:focus\:bg-accent-light:focus {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .md\:focus\:bg-muted:focus {
+    background-color: var(--text-muted-color);
+  }
+
+  .md\:focus\:bg-muted-light:focus {
+    background-color: var(--text-muted-light-color);
   }
 
   .md\:bg-bottom {
@@ -33291,6 +33841,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .md\:border-accent-light {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .md\:border-muted {
+    border-color: var(--text-muted-color);
+  }
+
+  .md\:border-muted-light {
+    border-color: var(--text-muted-light-color);
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -33695,6 +34257,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .md\:hover\:border-accent-light:hover {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .md\:hover\:border-muted:hover {
+    border-color: var(--text-muted-color);
+  }
+
+  .md\:hover\:border-muted-light:hover {
+    border-color: var(--text-muted-light-color);
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -34097,6 +34671,18 @@ button {
 
   .md\:focus\:border-accent:focus {
     border-color: var(--text-accent-color);
+  }
+
+  .md\:focus\:border-accent-light:focus {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .md\:focus\:border-muted:focus {
+    border-color: var(--text-muted-color);
+  }
+
+  .md\:focus\:border-muted-light:focus {
+    border-color: var(--text-muted-light-color);
   }
 
   .md\:rounded-none {
@@ -39125,6 +39711,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:placeholder-default::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:placeholder-default::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:placeholder-default:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:placeholder-default::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:placeholder-default::placeholder {
+    color: var(--text-default-color);
+  }
+
   .md\:placeholder-accent::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -39145,24 +39751,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .md\:placeholder-default::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .md\:placeholder-accent-light::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:placeholder-default::-moz-placeholder {
-    color: var(--text-default-color);
+  .md\:placeholder-accent-light::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:placeholder-default:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .md\:placeholder-accent-light:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:placeholder-default::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .md\:placeholder-accent-light::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:placeholder-default::placeholder {
-    color: var(--text-default-color);
+  .md\:placeholder-accent-light::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .md\:placeholder-muted::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:placeholder-muted::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:placeholder-muted:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:placeholder-muted::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:placeholder-muted::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:placeholder-muted-light::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:placeholder-muted-light::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:placeholder-muted-light:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:placeholder-muted-light::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:placeholder-muted-light::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .md\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
@@ -41165,6 +41811,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:focus\:placeholder-default:focus::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:focus\:placeholder-default:focus::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:focus\:placeholder-default:focus:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:focus\:placeholder-default:focus::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .md\:focus\:placeholder-default:focus::placeholder {
+    color: var(--text-default-color);
+  }
+
   .md\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -41185,24 +41851,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .md\:focus\:placeholder-default:focus::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .md\:focus\:placeholder-accent-light:focus::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:focus\:placeholder-default:focus::-moz-placeholder {
-    color: var(--text-default-color);
+  .md\:focus\:placeholder-accent-light:focus::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:focus\:placeholder-default:focus:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .md\:focus\:placeholder-accent-light:focus:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:focus\:placeholder-default:focus::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .md\:focus\:placeholder-accent-light:focus::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .md\:focus\:placeholder-default:focus::placeholder {
-    color: var(--text-default-color);
+  .md\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .md\:focus\:placeholder-muted:focus::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:placeholder-muted:focus::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:placeholder-muted:focus:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:placeholder-muted:focus::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:placeholder-muted:focus::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:placeholder-muted-light:focus::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:placeholder-muted-light:focus::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:placeholder-muted-light:focus:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:placeholder-muted-light:focus::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .md\:focus\:placeholder-muted-light:focus::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .md\:pointer-events-none {
@@ -41880,12 +42586,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:text-default {
+    color: var(--text-default-color);
+  }
+
   .md\:text-accent {
     color: var(--text-accent-color);
   }
 
-  .md\:text-default {
-    color: var(--text-default-color);
+  .md\:text-accent-light {
+    color: var(--text-accent-light-color);
+  }
+
+  .md\:text-muted {
+    color: var(--text-muted-color);
+  }
+
+  .md\:text-muted-light {
+    color: var(--text-muted-light-color);
   }
 
   .md\:hover\:text-transparent:hover {
@@ -42288,12 +43006,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .md\:hover\:text-accent:hover {
     color: var(--text-accent-color);
   }
 
-  .md\:hover\:text-default:hover {
-    color: var(--text-default-color);
+  .md\:hover\:text-accent-light:hover {
+    color: var(--text-accent-light-color);
+  }
+
+  .md\:hover\:text-muted:hover {
+    color: var(--text-muted-color);
+  }
+
+  .md\:hover\:text-muted-light:hover {
+    color: var(--text-muted-light-color);
   }
 
   .md\:focus\:text-transparent:focus {
@@ -42696,12 +43426,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .md\:focus\:text-default:focus {
+    color: var(--text-default-color);
+  }
+
   .md\:focus\:text-accent:focus {
     color: var(--text-accent-color);
   }
 
-  .md\:focus\:text-default:focus {
-    color: var(--text-default-color);
+  .md\:focus\:text-accent-light:focus {
+    color: var(--text-accent-light-color);
+  }
+
+  .md\:focus\:text-muted:focus {
+    color: var(--text-muted-color);
+  }
+
+  .md\:focus\:text-muted-light:focus {
+    color: var(--text-muted-light-color);
   }
 
   .md\:italic {
@@ -46484,6 +47226,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .lg\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .lg\:divide-muted > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-color);
+  }
+
+  .lg\:divide-muted-light > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-light-color);
+  }
+
   .lg\:sr-only {
     position: absolute;
     width: 1px;
@@ -46948,12 +47702,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .lg\:bg-default {
+    background-color: var(--text-default-color);
+  }
+
   .lg\:bg-accent {
     background-color: var(--text-accent-color);
   }
 
-  .lg\:bg-default {
-    background-color: var(--text-default-color);
+  .lg\:bg-accent-light {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .lg\:bg-muted {
+    background-color: var(--text-muted-color);
+  }
+
+  .lg\:bg-muted-light {
+    background-color: var(--text-muted-light-color);
   }
 
   .lg\:hover\:bg-transparent:hover {
@@ -47356,12 +48122,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .lg\:hover\:bg-default:hover {
+    background-color: var(--text-default-color);
+  }
+
   .lg\:hover\:bg-accent:hover {
     background-color: var(--text-accent-color);
   }
 
-  .lg\:hover\:bg-default:hover {
-    background-color: var(--text-default-color);
+  .lg\:hover\:bg-accent-light:hover {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .lg\:hover\:bg-muted:hover {
+    background-color: var(--text-muted-color);
+  }
+
+  .lg\:hover\:bg-muted-light:hover {
+    background-color: var(--text-muted-light-color);
   }
 
   .lg\:focus\:bg-transparent:focus {
@@ -47764,12 +48542,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .lg\:focus\:bg-default:focus {
+    background-color: var(--text-default-color);
+  }
+
   .lg\:focus\:bg-accent:focus {
     background-color: var(--text-accent-color);
   }
 
-  .lg\:focus\:bg-default:focus {
-    background-color: var(--text-default-color);
+  .lg\:focus\:bg-accent-light:focus {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .lg\:focus\:bg-muted:focus {
+    background-color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:bg-muted-light:focus {
+    background-color: var(--text-muted-light-color);
   }
 
   .lg\:bg-bottom {
@@ -48256,6 +49046,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .lg\:border-accent-light {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .lg\:border-muted {
+    border-color: var(--text-muted-color);
+  }
+
+  .lg\:border-muted-light {
+    border-color: var(--text-muted-light-color);
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -48660,6 +49462,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .lg\:hover\:border-accent-light:hover {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .lg\:hover\:border-muted:hover {
+    border-color: var(--text-muted-color);
+  }
+
+  .lg\:hover\:border-muted-light:hover {
+    border-color: var(--text-muted-light-color);
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -49062,6 +49876,18 @@ button {
 
   .lg\:focus\:border-accent:focus {
     border-color: var(--text-accent-color);
+  }
+
+  .lg\:focus\:border-accent-light:focus {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .lg\:focus\:border-muted:focus {
+    border-color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:border-muted-light:focus {
+    border-color: var(--text-muted-light-color);
   }
 
   .lg\:rounded-none {
@@ -54090,6 +54916,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:placeholder-default::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:placeholder-default::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:placeholder-default:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:placeholder-default::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:placeholder-default::placeholder {
+    color: var(--text-default-color);
+  }
+
   .lg\:placeholder-accent::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -54110,24 +54956,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .lg\:placeholder-default::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:placeholder-accent-light::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:placeholder-default::-moz-placeholder {
-    color: var(--text-default-color);
+  .lg\:placeholder-accent-light::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:placeholder-default:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:placeholder-accent-light:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:placeholder-default::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:placeholder-accent-light::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:placeholder-default::placeholder {
-    color: var(--text-default-color);
+  .lg\:placeholder-accent-light::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .lg\:placeholder-muted::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:placeholder-muted::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:placeholder-muted:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:placeholder-muted::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:placeholder-muted::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:placeholder-muted-light::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:placeholder-muted-light::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:placeholder-muted-light:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:placeholder-muted-light::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:placeholder-muted-light::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .lg\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
@@ -56130,6 +57016,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:focus\:placeholder-default:focus::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:focus\:placeholder-default:focus::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:focus\:placeholder-default:focus:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:focus\:placeholder-default:focus::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .lg\:focus\:placeholder-default:focus::placeholder {
+    color: var(--text-default-color);
+  }
+
   .lg\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -56150,24 +57056,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .lg\:focus\:placeholder-default:focus::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:focus\:placeholder-accent-light:focus::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:focus\:placeholder-default:focus::-moz-placeholder {
-    color: var(--text-default-color);
+  .lg\:focus\:placeholder-accent-light:focus::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:focus\:placeholder-default:focus:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:focus\:placeholder-accent-light:focus:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:focus\:placeholder-default:focus::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .lg\:focus\:placeholder-accent-light:focus::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .lg\:focus\:placeholder-default:focus::placeholder {
-    color: var(--text-default-color);
+  .lg\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .lg\:focus\:placeholder-muted:focus::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:placeholder-muted:focus::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:placeholder-muted:focus:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:placeholder-muted:focus::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:placeholder-muted:focus::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:placeholder-muted-light:focus::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:placeholder-muted-light:focus::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:placeholder-muted-light:focus:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:placeholder-muted-light:focus::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .lg\:focus\:placeholder-muted-light:focus::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .lg\:pointer-events-none {
@@ -56845,12 +57791,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:text-default {
+    color: var(--text-default-color);
+  }
+
   .lg\:text-accent {
     color: var(--text-accent-color);
   }
 
-  .lg\:text-default {
-    color: var(--text-default-color);
+  .lg\:text-accent-light {
+    color: var(--text-accent-light-color);
+  }
+
+  .lg\:text-muted {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:text-muted-light {
+    color: var(--text-muted-light-color);
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -57253,12 +58211,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .lg\:hover\:text-accent:hover {
     color: var(--text-accent-color);
   }
 
-  .lg\:hover\:text-default:hover {
-    color: var(--text-default-color);
+  .lg\:hover\:text-accent-light:hover {
+    color: var(--text-accent-light-color);
+  }
+
+  .lg\:hover\:text-muted:hover {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:hover\:text-muted-light:hover {
+    color: var(--text-muted-light-color);
   }
 
   .lg\:focus\:text-transparent:focus {
@@ -57661,12 +58631,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .lg\:focus\:text-default:focus {
+    color: var(--text-default-color);
+  }
+
   .lg\:focus\:text-accent:focus {
     color: var(--text-accent-color);
   }
 
-  .lg\:focus\:text-default:focus {
-    color: var(--text-default-color);
+  .lg\:focus\:text-accent-light:focus {
+    color: var(--text-accent-light-color);
+  }
+
+  .lg\:focus\:text-muted:focus {
+    color: var(--text-muted-color);
+  }
+
+  .lg\:focus\:text-muted-light:focus {
+    color: var(--text-muted-light-color);
   }
 
   .lg\:italic {
@@ -61449,6 +62431,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .xl\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .xl\:divide-muted > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-color);
+  }
+
+  .xl\:divide-muted-light > :not(template) ~ :not(template) {
+    border-color: var(--text-muted-light-color);
+  }
+
   .xl\:sr-only {
     position: absolute;
     width: 1px;
@@ -61913,12 +62907,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .xl\:bg-default {
+    background-color: var(--text-default-color);
+  }
+
   .xl\:bg-accent {
     background-color: var(--text-accent-color);
   }
 
-  .xl\:bg-default {
-    background-color: var(--text-default-color);
+  .xl\:bg-accent-light {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .xl\:bg-muted {
+    background-color: var(--text-muted-color);
+  }
+
+  .xl\:bg-muted-light {
+    background-color: var(--text-muted-light-color);
   }
 
   .xl\:hover\:bg-transparent:hover {
@@ -62321,12 +63327,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .xl\:hover\:bg-default:hover {
+    background-color: var(--text-default-color);
+  }
+
   .xl\:hover\:bg-accent:hover {
     background-color: var(--text-accent-color);
   }
 
-  .xl\:hover\:bg-default:hover {
-    background-color: var(--text-default-color);
+  .xl\:hover\:bg-accent-light:hover {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .xl\:hover\:bg-muted:hover {
+    background-color: var(--text-muted-color);
+  }
+
+  .xl\:hover\:bg-muted-light:hover {
+    background-color: var(--text-muted-light-color);
   }
 
   .xl\:focus\:bg-transparent:focus {
@@ -62729,12 +63747,24 @@ button {
     background-color: var(--header-background-color);
   }
 
+  .xl\:focus\:bg-default:focus {
+    background-color: var(--text-default-color);
+  }
+
   .xl\:focus\:bg-accent:focus {
     background-color: var(--text-accent-color);
   }
 
-  .xl\:focus\:bg-default:focus {
-    background-color: var(--text-default-color);
+  .xl\:focus\:bg-accent-light:focus {
+    background-color: var(--text-accent-light-color);
+  }
+
+  .xl\:focus\:bg-muted:focus {
+    background-color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:bg-muted-light:focus {
+    background-color: var(--text-muted-light-color);
   }
 
   .xl\:bg-bottom {
@@ -63221,6 +64251,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .xl\:border-accent-light {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .xl\:border-muted {
+    border-color: var(--text-muted-color);
+  }
+
+  .xl\:border-muted-light {
+    border-color: var(--text-muted-light-color);
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -63625,6 +64667,18 @@ button {
     border-color: var(--text-accent-color);
   }
 
+  .xl\:hover\:border-accent-light:hover {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .xl\:hover\:border-muted:hover {
+    border-color: var(--text-muted-color);
+  }
+
+  .xl\:hover\:border-muted-light:hover {
+    border-color: var(--text-muted-light-color);
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -64027,6 +65081,18 @@ button {
 
   .xl\:focus\:border-accent:focus {
     border-color: var(--text-accent-color);
+  }
+
+  .xl\:focus\:border-accent-light:focus {
+    border-color: var(--text-accent-light-color);
+  }
+
+  .xl\:focus\:border-muted:focus {
+    border-color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:border-muted-light:focus {
+    border-color: var(--text-muted-light-color);
   }
 
   .xl\:rounded-none {
@@ -69055,6 +70121,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:placeholder-default::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:placeholder-default::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:placeholder-default:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:placeholder-default::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:placeholder-default::placeholder {
+    color: var(--text-default-color);
+  }
+
   .xl\:placeholder-accent::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -69075,24 +70161,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .xl\:placeholder-default::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:placeholder-accent-light::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:placeholder-default::-moz-placeholder {
-    color: var(--text-default-color);
+  .xl\:placeholder-accent-light::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:placeholder-default:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:placeholder-accent-light:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:placeholder-default::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:placeholder-accent-light::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:placeholder-default::placeholder {
-    color: var(--text-default-color);
+  .xl\:placeholder-accent-light::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .xl\:placeholder-muted::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:placeholder-muted::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:placeholder-muted:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:placeholder-muted::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:placeholder-muted::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:placeholder-muted-light::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:placeholder-muted-light::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:placeholder-muted-light:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:placeholder-muted-light::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:placeholder-muted-light::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .xl\:focus\:placeholder-transparent:focus::-webkit-input-placeholder {
@@ -71095,6 +72221,26 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:focus\:placeholder-default:focus::-webkit-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:focus\:placeholder-default:focus::-moz-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:focus\:placeholder-default:focus:-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:focus\:placeholder-default:focus::-ms-input-placeholder {
+    color: var(--text-default-color);
+  }
+
+  .xl\:focus\:placeholder-default:focus::placeholder {
+    color: var(--text-default-color);
+  }
+
   .xl\:focus\:placeholder-accent:focus::-webkit-input-placeholder {
     color: var(--text-accent-color);
   }
@@ -71115,24 +72261,64 @@ button {
     color: var(--text-accent-color);
   }
 
-  .xl\:focus\:placeholder-default:focus::-webkit-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:focus\:placeholder-accent-light:focus::-webkit-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:focus\:placeholder-default:focus::-moz-placeholder {
-    color: var(--text-default-color);
+  .xl\:focus\:placeholder-accent-light:focus::-moz-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:focus\:placeholder-default:focus:-ms-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:focus\:placeholder-accent-light:focus:-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:focus\:placeholder-default:focus::-ms-input-placeholder {
-    color: var(--text-default-color);
+  .xl\:focus\:placeholder-accent-light:focus::-ms-input-placeholder {
+    color: var(--text-accent-light-color);
   }
 
-  .xl\:focus\:placeholder-default:focus::placeholder {
-    color: var(--text-default-color);
+  .xl\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--text-accent-light-color);
+  }
+
+  .xl\:focus\:placeholder-muted:focus::-webkit-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:placeholder-muted:focus::-moz-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:placeholder-muted:focus:-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:placeholder-muted:focus::-ms-input-placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:placeholder-muted:focus::placeholder {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:placeholder-muted-light:focus::-webkit-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:placeholder-muted-light:focus::-moz-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:placeholder-muted-light:focus:-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:placeholder-muted-light:focus::-ms-input-placeholder {
+    color: var(--text-muted-light-color);
+  }
+
+  .xl\:focus\:placeholder-muted-light:focus::placeholder {
+    color: var(--text-muted-light-color);
   }
 
   .xl\:pointer-events-none {
@@ -71810,12 +72996,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:text-default {
+    color: var(--text-default-color);
+  }
+
   .xl\:text-accent {
     color: var(--text-accent-color);
   }
 
-  .xl\:text-default {
-    color: var(--text-default-color);
+  .xl\:text-accent-light {
+    color: var(--text-accent-light-color);
+  }
+
+  .xl\:text-muted {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:text-muted-light {
+    color: var(--text-muted-light-color);
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -72218,12 +73416,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:hover\:text-default:hover {
+    color: var(--text-default-color);
+  }
+
   .xl\:hover\:text-accent:hover {
     color: var(--text-accent-color);
   }
 
-  .xl\:hover\:text-default:hover {
-    color: var(--text-default-color);
+  .xl\:hover\:text-accent-light:hover {
+    color: var(--text-accent-light-color);
+  }
+
+  .xl\:hover\:text-muted:hover {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:hover\:text-muted-light:hover {
+    color: var(--text-muted-light-color);
   }
 
   .xl\:focus\:text-transparent:focus {
@@ -72626,12 +73836,24 @@ button {
     color: var(--header-background-color);
   }
 
+  .xl\:focus\:text-default:focus {
+    color: var(--text-default-color);
+  }
+
   .xl\:focus\:text-accent:focus {
     color: var(--text-accent-color);
   }
 
-  .xl\:focus\:text-default:focus {
-    color: var(--text-default-color);
+  .xl\:focus\:text-accent-light:focus {
+    color: var(--text-accent-light-color);
+  }
+
+  .xl\:focus\:text-muted:focus {
+    color: var(--text-muted-color);
+  }
+
+  .xl\:focus\:text-muted-light:focus {
+    color: var(--text-muted-light-color);
   }
 
   .xl\:italic {
