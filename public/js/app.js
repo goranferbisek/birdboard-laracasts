@@ -1950,9 +1950,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      tasks: [{
+        value: ''
+      }]
+    };
+  },
   methods: {
     addTask: function addTask() {
-      alert('called');
+      this.tasks.push({
+        value: ''
+      });
     }
   }
 });
@@ -37707,17 +37716,25 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "flex-1 ml-4" }, [
-          _c("div", { staticClass: "mb-4" }, [
-            _c("label", { staticClass: "text-sm block mb-2" }, [
-              _vm._v("Need Some Tasks?")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              staticClass:
-                "border border-muted-light p-2 text-xs block w-full rounded",
-              attrs: { type: "text", placeholder: "Task 1" }
-            })
-          ]),
+          _c(
+            "div",
+            { staticClass: "mb-4" },
+            [
+              _c("label", { staticClass: "text-sm block mb-2" }, [
+                _vm._v("Need Some Tasks?")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.tasks, function(task) {
+                return _c("input", {
+                  key: task,
+                  staticClass:
+                    "border border-muted-light mb-2 p-2 text-xs block w-full rounded",
+                  attrs: { type: "text", placeholder: "Task 1" }
+                })
+              })
+            ],
+            2
+          ),
           _vm._v(" "),
           _c(
             "button",

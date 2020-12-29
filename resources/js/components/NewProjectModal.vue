@@ -17,7 +17,7 @@
         <div class="flex-1 ml-4">
             <div class="mb-4">
                 <label class="text-sm block mb-2">Need Some Tasks?</label>
-                <input type="text" class="border border-muted-light p-2 text-xs block w-full rounded" placeholder="Task 1">
+                <input type="text" class="border border-muted-light mb-2 p-2 text-xs block w-full rounded" placeholder="Task 1" v-for="task in tasks" :key="task">
             </div>
 
             <button class="inline-flex items-center text-xs" @click="addTask">
@@ -41,9 +41,18 @@
 
 <script>
 export default {
+    data() {
+        return {
+            tasks: [
+                { value: '' }
+            ]
+        }
+    },
+
     methods: {
+
         addTask() {
-            alert('called');
+            this.tasks.push({ value: ''});
         }
     }
 }
