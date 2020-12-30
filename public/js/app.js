@@ -1949,18 +1949,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      tasks: [{
-        value: ''
-      }]
+      form: {
+        title: '',
+        description: '',
+        tasks: [{
+          value: ''
+        }]
+      },
+      errors: {}
     };
   },
   methods: {
     addTask: function addTask() {
-      this.tasks.push({
+      this.form.tasks.push({
         value: ''
+      });
+    },
+    submit: function submit() {
+      var _this = this;
+
+      axios.post('/projects', this.form).then(function (response) {
+        alert('Create project');
+      })["catch"](function (error) {
+        _this.errors = error.response.data.errors;
       });
     }
   }
@@ -37681,133 +37717,220 @@ var render = function() {
         _vm._v("Let's Start Something New")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex" }, [
-        _c("div", { staticClass: "flex-1 mr-4" }, [
-          _c("div", { staticClass: "mb-4" }, [
-            _c(
-              "label",
-              { staticClass: "text-sm block mb-2", attrs: { for: "title" } },
-              [_vm._v("Title")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass:
-                "border border-muted-light p-2 text-xs block w-full rounded",
-              attrs: { type: "text", id: "title" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mb-4" }, [
-            _c(
-              "label",
-              {
-                staticClass: "text-sm block mb-2",
-                attrs: { for: "description" }
-              },
-              [_vm._v("Description")]
-            ),
-            _vm._v(" "),
-            _c("textarea", {
-              staticClass:
-                "border border-muted-light p-2 text-xs block w-full rounded",
-              attrs: { id: "description", rows: "7" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex-1 ml-4" }, [
-          _c(
-            "div",
-            { staticClass: "mb-4" },
-            [
-              _c("label", { staticClass: "text-sm block mb-2" }, [
-                _vm._v("Need Some Tasks?")
+      _c(
+        "form",
+        {
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.submit($event)
+            }
+          }
+        },
+        [
+          _c("div", { staticClass: "flex" }, [
+            _c("div", { staticClass: "flex-1 mr-4" }, [
+              _c("div", { staticClass: "mb-4" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "text-sm block mb-2",
+                    attrs: { for: "title" }
+                  },
+                  [_vm._v("Title")]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.title,
+                      expression: "form.title"
+                    }
+                  ],
+                  staticClass: "border p-2 text-xs block w-full rounded",
+                  class: _vm.errors.title
+                    ? "border-error"
+                    : "border-muted-light",
+                  attrs: { type: "text", id: "title" },
+                  domProps: { value: _vm.form.title },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "title", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.title
+                  ? _c("span", {
+                      staticClass: "text-xs italic text-error",
+                      domProps: { textContent: _vm._s(_vm.errors.title[0]) }
+                    })
+                  : _vm._e()
               ]),
               _vm._v(" "),
-              _vm._l(_vm.tasks, function(task) {
-                return _c("input", {
-                  key: task,
+              _c("div", { staticClass: "mb-4" }, [
+                _c(
+                  "label",
+                  {
+                    staticClass: "text-sm block mb-2",
+                    attrs: { for: "description" }
+                  },
+                  [_vm._v("Description")]
+                ),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.form.description,
+                      expression: "form.description"
+                    }
+                  ],
                   staticClass:
-                    "border border-muted-light mb-2 p-2 text-xs block w-full rounded",
-                  attrs: { type: "text", placeholder: "Task 1" }
-                })
-              })
-            ],
-            2
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "inline-flex items-center text-xs",
-              on: { click: _vm.addTask }
-            },
-            [
-              _c(
-                "svg",
-                {
-                  staticClass: "mr-2",
-                  attrs: {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: "18",
-                    height: "18",
-                    viewBox: "0 0 18 18"
+                    "border border-muted-light p-2 text-xs block w-full rounded",
+                  class: _vm.errors.description
+                    ? "border-error"
+                    : "border-muted-light",
+                  attrs: { id: "description", rows: "7" },
+                  domProps: { value: _vm.form.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.form, "description", $event.target.value)
+                    }
                   }
+                }),
+                _vm._v(" "),
+                _vm.errors.description
+                  ? _c("span", {
+                      staticClass: "text-xs italic text-error",
+                      domProps: {
+                        textContent: _vm._s(_vm.errors.description[0])
+                      }
+                    })
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex-1 ml-4" }, [
+              _c(
+                "div",
+                { staticClass: "mb-4" },
+                [
+                  _c("label", { staticClass: "text-sm block mb-2" }, [
+                    _vm._v("Need Some Tasks?")
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.form.tasks, function(task) {
+                    return _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: task.value,
+                          expression: "task.value"
+                        }
+                      ],
+                      staticClass:
+                        "border border-muted-light mb-2 p-2 text-xs block w-full rounded",
+                      attrs: { type: "text", placeholder: "Task 1" },
+                      domProps: { value: task.value },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(task, "value", $event.target.value)
+                        }
+                      }
+                    })
+                  })
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "inline-flex items-center text-xs",
+                  on: { click: _vm.addTask }
                 },
                 [
                   _c(
-                    "g",
+                    "svg",
                     {
+                      staticClass: "mr-2",
                       attrs: {
-                        fill: "none",
-                        "fill-rule": "evenodd",
-                        opacity: ".307"
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "18",
+                        height: "18",
+                        viewBox: "0 0 18 18"
                       }
                     },
                     [
-                      _c("path", {
-                        attrs: {
-                          stroke: "#000",
-                          "stroke-opacity": ".012",
-                          "stroke-width": "0",
-                          d: "M-3-3h24v24H-3z"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("path", {
-                        attrs: {
-                          fill: "#000",
-                          d:
-                            "M9 0a9 9 0 0 0-9 9c0 4.97 4.02 9 9 9A9 9 0 0 0 9 0zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11H8v3H5v2h3v3h2v-3h3V8h-3V5z"
-                        }
-                      })
+                      _c(
+                        "g",
+                        {
+                          attrs: {
+                            fill: "none",
+                            "fill-rule": "evenodd",
+                            opacity: ".307"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              stroke: "#000",
+                              "stroke-opacity": ".012",
+                              "stroke-width": "0",
+                              d: "M-3-3h24v24H-3z"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("path", {
+                            attrs: {
+                              fill: "#000",
+                              d:
+                                "M9 0a9 9 0 0 0-9 9c0 4.97 4.02 9 9 9A9 9 0 0 0 9 0zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11H8v3H5v2h3v3h2v-3h3V8h-3V5z"
+                            }
+                          })
+                        ]
+                      )
                     ]
-                  )
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Add New Task Field")])
                 ]
-              ),
-              _vm._v(" "),
-              _c("span", [_vm._v("Add New Task Field")])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("footer", { staticClass: "flex justify-end" }, [
-        _c(
-          "button",
-          {
-            staticClass: "button is-outlined mr-4",
-            on: {
-              click: function($event) {
-                return _vm.$modal.hide("new-project")
-              }
-            }
-          },
-          [_vm._v("Cancel")]
-        ),
-        _vm._v(" "),
-        _c("button", { staticClass: "button" }, [_vm._v("Create Project")])
-      ])
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("footer", { staticClass: "flex justify-end" }, [
+            _c(
+              "button",
+              {
+                staticClass: "button is-outlined mr-4",
+                on: {
+                  click: function($event) {
+                    return _vm.$modal.hide("new-project")
+                  }
+                }
+              },
+              [_vm._v("Cancel")]
+            ),
+            _vm._v(" "),
+            _c("button", { staticClass: "button" }, [_vm._v("Create Project")])
+          ])
+        ]
+      )
     ]
   )
 }
