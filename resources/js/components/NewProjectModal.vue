@@ -86,7 +86,7 @@ export default {
         submit() {
             axios.post('/projects', this.form)
                 .then(response => {
-                    alert('Create project');
+                    location = response.data.message;
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors;

@@ -1994,7 +1994,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/projects', this.form).then(function (response) {
-        alert('Create project');
+        location = response.data.message;
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });
