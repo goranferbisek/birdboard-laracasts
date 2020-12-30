@@ -37,7 +37,7 @@
                         class="border border-muted-light mb-2 p-2 text-xs block w-full rounded"
                         placeholder="Task 1"
                         v-for="task in form.tasks"
-                        v-model="task.value"
+                        v-model="task.body"
                     >
                 </div>
 
@@ -69,7 +69,7 @@ export default {
                 title: '',
                 description: '',
                 tasks: [
-                    { value: '' }
+                    { body: '' }
                 ]
             },
 
