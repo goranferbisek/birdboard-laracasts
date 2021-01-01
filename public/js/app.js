@@ -51030,7 +51030,7 @@ var BirdboardForm = /*#__PURE__*/function () {
     _classCallCheck(this, BirdboardForm);
 
     this.originalData = JSON.parse(JSON.stringify(data));
-    Object.assign(this.data);
+    Object.assign(this, data);
     this.errors = {};
   }
 
@@ -51048,7 +51048,7 @@ var BirdboardForm = /*#__PURE__*/function () {
   }, {
     key: "submit",
     value: function submit(endpoint) {
-      return axios.post('/projects', this);
+      return axios.post(endpoint, this.data());
     }
   }]);
 

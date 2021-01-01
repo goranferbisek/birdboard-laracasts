@@ -1,7 +1,7 @@
 class BirdboardForm {
     constructor(data) {
         this.originalData = JSON.parse(JSON.stringify(data));
-        Object.assign(this.data);
+        Object.assign(this, data);
 
         this.errors = {};
     }
@@ -17,7 +17,7 @@ class BirdboardForm {
     }
 
     submit(endpoint) {
-        return axios.post('/projects', this)
+        return axios.post(endpoint, this.data())
     }
 }
 
