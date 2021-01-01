@@ -2002,8 +2002,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         tasks: [{
           body: ''
         }]
-      }),
-      errors: {}
+      })
     };
   },
   methods: {
@@ -2022,12 +2021,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this.form.submit('/projects').then(function (response) {
                   return location = response.data.message;
-                }); // try {
-                //     location = (await axios.post('/projects', this.form)).data.message;
-                // } catch (error) {
-                //     this.errors = error.response.data.errors;
-                // }
-
+                });
 
               case 1:
               case "end":
@@ -38528,7 +38522,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "border p-2 text-xs block w-full rounded",
-                  class: _vm.errors.title
+                  class: _vm.form.errors.title
                     ? "border-error"
                     : "border-muted-light",
                   attrs: { type: "text", id: "title" },
@@ -38543,10 +38537,12 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _vm.errors.title
+                _vm.form.errors.title
                   ? _c("span", {
                       staticClass: "text-xs italic text-error",
-                      domProps: { textContent: _vm._s(_vm.errors.title[0]) }
+                      domProps: {
+                        textContent: _vm._s(_vm.form.errors.title[0])
+                      }
                     })
                   : _vm._e()
               ]),
@@ -38572,7 +38568,7 @@ var render = function() {
                   ],
                   staticClass:
                     "border border-muted-light p-2 text-xs block w-full rounded",
-                  class: _vm.errors.description
+                  class: _vm.form.errors.description
                     ? "border-error"
                     : "border-muted-light",
                   attrs: { id: "description", rows: "7" },
@@ -38587,11 +38583,11 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _vm.errors.description
+                _vm.form.errors.description
                   ? _c("span", {
                       staticClass: "text-xs italic text-error",
                       domProps: {
-                        textContent: _vm._s(_vm.errors.description[0])
+                        textContent: _vm._s(_vm.form.errors.description[0])
                       }
                     })
                   : _vm._e()
@@ -51048,7 +51044,12 @@ var BirdboardForm = /*#__PURE__*/function () {
   }, {
     key: "submit",
     value: function submit(endpoint) {
-      return axios.post(endpoint, this.data());
+      return axios.post(endpoint, this.data())["catch"](this.onFail.bind(this));
+    }
+  }, {
+    key: "onFail",
+    value: function onFail(error) {
+      this.errors = error.response.data.errors;
     }
   }]);
 

@@ -18,6 +18,11 @@ class BirdboardForm {
 
     submit(endpoint) {
         return axios.post(endpoint, this.data())
+            .catch(this.onFail.bind(this));
+    }
+
+    onFail(error) {
+        this.errors = error.response.data.errors;
     }
 }
 
