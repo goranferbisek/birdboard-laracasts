@@ -4,6 +4,7 @@ class BirdboardForm {
         Object.assign(this, data);
 
         this.errors = {};
+        this.submited = false;
     }
 
     data() {
@@ -18,11 +19,25 @@ class BirdboardForm {
 
     submit(endpoint) {
         return axios.post(endpoint, this.data())
-            .catch(this.onFail.bind(this));
+            .catch(this.onFail.bind(this))
+            .then(this.onSuccess.bind(this));
+    }
+
+    onSuccess(response) {
+        this.submited = true;
+
+        return response;
     }
 
     onFail(error) {
         this.errors = error.response.data.errors;
+        this.submited = false;
+
+        throw error;
+    }
+
+    reset() {
+        Object.assign(this, this.originalData);
     }
 }
 
