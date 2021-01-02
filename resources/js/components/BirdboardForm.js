@@ -17,8 +17,20 @@ class BirdboardForm {
         return data;
     }
 
-    submit(endpoint) {
-        return axios.post(endpoint, this.data())
+    post(endpoint) {
+        this.submit(endpoint);
+    }
+
+    patch(endpoint) {
+        this.submit(endpoint, 'patch');
+    }
+
+    delete(endpoint) {
+        this.submit(endpoint, 'delete');
+    }
+
+    submit(endpoint, requestType = 'post') {
+        return axios[requestType](endpoint, this.data())
             .catch(this.onFail.bind(this))
             .then(this.onSuccess.bind(this));
     }

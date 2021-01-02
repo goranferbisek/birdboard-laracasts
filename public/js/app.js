@@ -51043,9 +51043,25 @@ var BirdboardForm = /*#__PURE__*/function () {
       return data;
     }
   }, {
+    key: "post",
+    value: function post(endpoint) {
+      this.submit(endpoint);
+    }
+  }, {
+    key: "patch",
+    value: function patch(endpoint) {
+      this.submit(endpoint, 'patch');
+    }
+  }, {
+    key: "delete",
+    value: function _delete(endpoint) {
+      this.submit(endpoint, 'delete');
+    }
+  }, {
     key: "submit",
     value: function submit(endpoint) {
-      return axios.post(endpoint, this.data())["catch"](this.onFail.bind(this)).then(this.onSuccess.bind(this));
+      var requestType = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'post';
+      return axios[requestType](endpoint, this.data())["catch"](this.onFail.bind(this)).then(this.onSuccess.bind(this));
     }
   }, {
     key: "onSuccess",
