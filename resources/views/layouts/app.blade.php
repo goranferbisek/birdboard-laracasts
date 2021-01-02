@@ -52,21 +52,24 @@
                                 @endif
                             @else
                                 <theme-switcher></theme-switcher>
-                                <a id="navbarDropdown" class="mr-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                <dropdown align="right">
+                                    <template v-slot:trigger>
+                                        <button class="flex items-center text-default no-underline text-sm">
+                                            <img
+                                                width="35"
+                                                src="{{ gravatar_url(auth()->user()->email) }}"
+                                                alt="{{ auth()->user()->name }}"
+                                                class="rounded-full mr-2"
+                                            >
+                                            {{ auth()->user()->name }}
+                                        </button>
+                                    </template>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 1</a>
+                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 2</a>
+                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 3</a>
+                                </dropdown>
                             @endguest
                         </div>
                     </div>
