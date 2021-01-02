@@ -51067,6 +51067,7 @@ var BirdboardForm = /*#__PURE__*/function () {
     key: "onSuccess",
     value: function onSuccess(response) {
       this.submited = true;
+      this.errors = {};
       return response;
     }
   }, {

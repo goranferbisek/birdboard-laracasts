@@ -37,6 +37,7 @@ class BirdboardForm {
 
     onSuccess(response) {
         this.submited = true;
+        this.errors = {};
 
         return response;
     }
