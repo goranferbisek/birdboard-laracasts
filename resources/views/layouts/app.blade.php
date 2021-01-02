@@ -66,9 +66,11 @@
                                         </button>
                                     </template>
 
-                                    <a href="#" class="dropdown-menu-link">Item 1</a>
-                                    <a href="#" class="dropdown-menu-link">Item 2</a>
-                                    <a href="#" class="dropdown-menu-link">Item 3</a>
+                                    <form id="logout-form" method="POST" action="/logout">
+                                        @csrf
+
+                                        <button type="submit" class="dropdown-menu-link w-full text-left">Logout</button>
+                                    </form>
                                 </dropdown>
                             @endguest
                         </div>
