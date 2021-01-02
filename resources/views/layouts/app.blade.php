@@ -55,7 +55,7 @@
 
                                 <dropdown align="right" width="200px">
                                     <template v-slot:trigger>
-                                        <button class="flex items-center text-default no-underline text-sm">
+                                        <button class="flex items-center text-default no-underline text-sm focus:outline-none">
                                             <img
                                                 width="35"
                                                 src="{{ gravatar_url(auth()->user()->email) }}"
