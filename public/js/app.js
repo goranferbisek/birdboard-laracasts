@@ -2008,7 +2008,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     addTask: function addTask() {
       this.form.tasks.push({
-        value: ''
+        body: ''
       });
     },
     submit: function submit() {
@@ -2019,11 +2019,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                if (!_this.form.tasks[0].body) {
+                  delete _this.form.originalData.tasks;
+                }
+
                 _this.form.submit('/projects').then(function (response) {
                   return location = response.data.message;
                 });
 
-              case 1:
+              case 2:
               case "end":
                 return _context.stop();
             }
