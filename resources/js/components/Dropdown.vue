@@ -1,7 +1,7 @@
 <template>
 <div class="dropdown relative">
     <!-- trigger -->
-    <div @click.prevent="isOpen = !isOpen">
+    <div class="dropdown-toggle" @click.prevent="isOpen = !isOpen">
         <slot name="trigger"></slot>
     </div>
 

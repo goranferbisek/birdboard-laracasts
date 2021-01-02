@@ -53,7 +53,7 @@
                             @else
                                 <theme-switcher></theme-switcher>
 
-                                <dropdown align="right">
+                                <dropdown align="right" width="200px">
                                     <template v-slot:trigger>
                                         <button class="flex items-center text-default no-underline text-sm">
                                             <img
@@ -66,9 +66,9 @@
                                         </button>
                                     </template>
 
-                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 1</a>
-                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 2</a>
-                                    <a href="#" class="block text-default no-underline hover:underline text-sm leading-loose px-4">Item 3</a>
+                                    <a href="#" class="dropdown-menu-link">Item 1</a>
+                                    <a href="#" class="dropdown-menu-link">Item 2</a>
+                                    <a href="#" class="dropdown-menu-link">Item 3</a>
                                 </dropdown>
                             @endguest
                         </div>

@@ -20483,6 +20483,7 @@ var render = function() {
     _c(
       "div",
       {
+        staticClass: "dropdown-toggle",
         on: {
           click: function($event) {
             $event.preventDefault()
