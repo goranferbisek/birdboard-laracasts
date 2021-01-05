@@ -4,10 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+import './bootstrap';
 
-window.Vue = require('vue');
-
+import Vue  from 'vue';
 import VModal from 'vue-js-modal';
 
 Vue.use(VModal);
@@ -33,6 +32,6 @@ Vue.component('dropdown', require('./components/Dropdown.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
+new Vue({
+    el: '#app'
 });
