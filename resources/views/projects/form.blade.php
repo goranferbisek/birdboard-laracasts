@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="field">
+<div class="field mb-6">
     <label class="label text-sm mb-2 block" for="description">Description</label>
     <div class="control">
         <textarea
