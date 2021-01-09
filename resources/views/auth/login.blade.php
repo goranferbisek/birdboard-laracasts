@@ -15,7 +15,7 @@
 
             <input id="email"
                 type="email"
-                class="border border-gray-400 rounded p-2 text-xs w-full @error('email') border-red-400 @enderror"
+                class="border border-gray-400 rounded p-2 text-xs w-full @error('email') border-error @enderror"
                 name="email"
                 value="{{ old('email') }}"
                 required autocomplete="email"
@@ -35,7 +35,7 @@
             <div>
                 <input id="password"
                     type="password"
-                    class="border border-gray-400 rounded p-2 text-xs w-full @error('password') border-red-400 @enderror"
+                    class="border border-gray-400 rounded p-2 text-xs w-full @error('password') border-error @enderror"
                     name="password"
                     required autocomplete="current-password">
 
